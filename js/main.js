@@ -185,7 +185,11 @@
   var fachImg = document.querySelector(".fachada-band img");
   if (fachImg) plxEls.push({ el: fachImg, f: 12, s: 1.05 });
 
-  if (plxEls.length && !reduced) {
+  /* hero scroll-out: afasta, esmaece e desfoca ao rolar (Apple) */
+  var heroMain = document.querySelector(".hero-main");
+  var heroArcsEl = document.querySelector(".hero-arcs");
+
+  if ((plxEls.length || heroMain) && !reduced) {
     var ticking = false;
     function plx() {
       var vh = window.innerHeight;
@@ -195,12 +199,37 @@
         var c = (r.top + r.height / 2 - vh / 2) / vh; // -0.5 .. 0.5
         o.el.style.transform = "translateY(" + (-c * o.f).toFixed(1) + "px) scale(" + o.s + ")";
       });
+      if (heroMain && document.body.classList.contains("loaded")) {
+        var p = Math.min(Math.max(window.scrollY / (vh * 0.9), 0), 1);
+        heroMain.style.transform = "translateY(" + (-p * 60).toFixed(1) + "px) scale(" + (1 - p * 0.06).toFixed(4) + ")";
+        heroMain.style.opacity = (1 - p * 1.15).toFixed(3);
+        heroMain.style.filter = "blur(" + (p * 10).toFixed(1) + "px)";
+        if (heroArcsEl) {
+          heroArcsEl.style.transform = "translateY(calc(-50% + " + (p * 90).toFixed(1) + "px))";
+          heroArcsEl.style.opacity = (1 - p).toFixed(3);
+        }
+      }
       ticking = false;
     }
     window.addEventListener("scroll", function () {
       if (!ticking) { ticking = true; requestAnimationFrame(plx); }
     }, { passive: true });
     plx();
+  }
+
+  /* ---------- Botões magnéticos (Apple-like) ---------- */
+  if (!reduced && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".btn, .nav-cta").forEach(function (btn) {
+      btn.addEventListener("mousemove", function (e) {
+        var r = btn.getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+        var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+        btn.style.transform = "translate(" + (dx * 7).toFixed(1) + "px, " + (dy * 5).toFixed(1) + "px)";
+      });
+      btn.addEventListener("mouseleave", function () {
+        btn.style.transform = "";
+      });
+    });
   }
 
   /* ---------- Formulário de visita (front-end) ---------- */
