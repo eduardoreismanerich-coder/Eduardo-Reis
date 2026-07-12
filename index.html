@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reino Church · Balneário Camboriú</title>
-  <meta name="description" content="A Reino é um movimento cristocêntrico e cultural que convida todos a viverem o ordinário de forma extraordinária. Balneário Camboriú, SC." />
-  <meta name="theme-color" content="#EEEAE0" />
-
-  <meta property="og:title" content="Reino Church · Balneário Camboriú" />
-  <meta property="og:description" content="We are reino. Vivendo o ordinário de forma extraordinária." />
+  <title>a Reino · Balneário Camboriú</title>
+  <meta name="description" content="A Reino é uma comunidade em Balneário Camboriú. Não somos uma religião — pertencer antes de crer, filho e não escravo. Planeje sua visita." />
+  <meta name="theme-color" content="#141414" />
+  <meta property="og:title" content="a Reino · Balneário Camboriú" />
+  <meta property="og:description" content="Reino x religião. Vivendo o ordinário de forma extraordinária. Planeje sua visita." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
 
@@ -16,28 +15,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23EEEAE0'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='16' fill='none' stroke='%231a1a1a' stroke-width='2.5'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='bold' font-size='26' fill='%231a1a1a' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141414'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='16' fill='none' stroke='%23EEEAE0' stroke-width='2.5'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='bold' font-size='26' fill='%23EEEAE0' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
   <!-- ===== HEADER ===== -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-inner">
-      <a href="#top" class="brand" aria-label="Reino Church - início">
-        <span class="mark" aria-hidden="true">
-          <svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.4"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg>
-        </span>
-        <span class="brand-text">reino<span class="brand-sub">church</span></span>
+      <a href="#top" class="brand" aria-label="a Reino - início">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.4"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg></span>
+        <span class="brand-word">reino</span>
       </a>
-
       <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#jornada">Jornada</a>
-        <a href="#valores">Valores</a>
+        <a href="#manifesto">Sobre</a>
         <a href="#reunioes">Reuniões</a>
-        <a href="#comunidade">Comunidade</a>
+        <a href="#conecte">Conecte-se</a>
+        <a href="#mensagens">Mensagens</a>
+        <a href="fe.html">No que cremos</a>
+        <a href="#contribuir">Contribuir</a>
         <a href="#visita" class="nav-cta">Planeje sua visita</a>
       </nav>
-
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
@@ -45,278 +41,298 @@
   </header>
 
   <!-- ===== HERO ===== -->
-  <section class="hero" id="top">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <span class="mark mark-lg" aria-hidden="true">
-          <svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.2"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg>
-        </span>
-        <h1 class="hero-title reveal">
-          <span>Vivendo</span>
-          <span>o ordinário</span>
-          <span>de forma <em>extraordinária</em></span>
-        </h1>
-        <p class="hero-lead reveal">
-          A Reino é um movimento cristocêntrico e cultural que conecta, de maneira
-          simples e verdadeira, as pessoas à presença de Jesus.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#visita" class="btn btn-solid">Planeje sua visita</a>
-          <a href="#reunioes" class="btn btn-line">Nossas reuniões</a>
-        </div>
-      </div>
-      <div class="hero-visual reveal" aria-hidden="true">
-        <div class="hero-photo hero-photo-ceu"></div>
-        <div class="hero-photo hero-photo-mar"></div>
-        <span class="hero-frag"></span>
-      </div>
+  <section class="hero on-ink" id="top">
+    <div class="hero-ring" aria-hidden="true"><svg viewBox="0 0 400 400" fill="none"><ellipse cx="200" cy="200" rx="198" ry="150" stroke="currentColor" stroke-width="1"/><ellipse cx="200" cy="200" rx="160" ry="118" stroke="currentColor" stroke-width="1"/></svg></div>
+    <div class="hero-top">
+      <div class="container"><p class="eyebrow hero-eyebrow"><span class="paren">(</span>&nbsp;Balneário Camboriú · desde 2021&nbsp;<span class="paren">)</span></p></div>
     </div>
-    <div class="wordband reveal" aria-hidden="true">
-      <span>we</span><span>are</span><span>reino</span>
-    </div>
-  </section>
-
-  <!-- ===== SOBRE ===== -->
-  <section class="section section-about" id="sobre">
-    <div class="container about-grid">
-      <p class="label reveal">Sobre</p>
-      <div class="about-body reveal">
-        <p class="about-lead">
-          Nosso caminho não é o da religião tradicional, mas o de uma vida que
-          conecta, de maneira simples e verdadeira, as pessoas à presença de Jesus.
-        </p>
-        <p>
-          Nossa essência não está em doutrinas ou rituais, mas em uma cultura de
-          excelência que nos leva a manifestar a vida de Cristo em todos os aspectos
-          da nossa existência. Não buscamos grandeza institucional — nos dedicamos a
-          ser um movimento relevante e transformador na vida de cada pessoa.
-        </p>
-        <p>
-          Somos uma comunidade formada por pessoas transformadas pelo Evangelho do
-          Reino, que vivem essa verdade diariamente. Queremos libertar as pessoas
-          para serem quem Deus as chamou a ser.
-        </p>
+    <div class="container hero-main">
+      <h1 class="hero-title">reino <span class="x">×</span> religião</h1>
+      <p class="hero-sub">Aqui você pertence antes de crer. Não somos uma religião — somos um estilo de vida. Venha como você é.</p>
+      <div class="hero-actions">
+        <a href="#visita" class="btn btn-solid">Planeje sua visita</a>
+        <a href="#mensagens" class="btn btn-line">Assista online</a>
       </div>
-    </div>
-    <div class="container">
-      <div class="wordband wordband-ink reveal" aria-hidden="true">
-        <span>vivendo</span><span>o</span><span>extraordinário</span>
+      <div class="hero-times">
+        <span class="lbl">Reuniões de domingo</span>
+        <span class="slot">11h</span><span class="sep">/</span>
+        <span class="slot">18h</span><span class="sep">/</span>
+        <span class="slot">20h</span>
       </div>
     </div>
   </section>
 
-  <!-- ===== JORNADA ===== -->
-  <section class="section section-journey" id="jornada">
+  <!-- ===== MANIFESTO ===== -->
+  <section class="section section-manifesto" id="manifesto">
     <div class="container">
-      <p class="label reveal">Belong · Believe · Become</p>
-      <div class="journey-grid">
-        <article class="journey-step reveal">
-          <span class="journey-en">belong</span>
-          <h3>Pertencer</h3>
-          <p>Qualquer pessoa que desejar pode fazer parte, sem pré-requisitos. Não impomos condutas para que você seja aceito — há espaço para você.</p>
+      <h2 class="h2 manifesto-head reveal">a gente não é sobre religião. é sobre presença.</h2>
+      <div class="manifesto-grid">
+        <article class="mani-card reveal">
+          <span class="n">01</span>
+          <h3>pertencer antes de crer</h3>
+          <p>Você faz parte antes de ser convencido de qualquer coisa. Aqui tem espaço pra você — do jeito que você chega.</p>
         </article>
-        <article class="journey-step reveal">
-          <span class="journey-en">believe</span>
-          <h3>Acreditar</h3>
-          <p>Quando abrimos espaço para conviver, através de nós as pessoas conhecem Jesus e passam a crer nele.</p>
+        <article class="mani-card reveal">
+          <span class="n">02</span>
+          <h3>filho, não escravo</h3>
+          <p>A relação com Deus é de filiação, liberdade e identidade. Nada de medo, peso ou obrigação religiosa.</p>
         </article>
-        <article class="journey-step reveal">
-          <span class="journey-en">become</span>
-          <h3>Se tornar</h3>
-          <p>Depois da salvação, o Espírito Santo passa a habitar em cada um e transforma o íntimo de cada pessoa.</p>
+        <article class="mani-card reveal">
+          <span class="n">03</span>
+          <h3>comunidade intencional</h3>
+          <p>Não somos um evento de domingo. Somos um povo que caminha junto — vivendo o ordinário de forma extraordinária.</p>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== VALORES ===== -->
-  <section class="section section-values" id="valores">
-    <div class="container">
-      <div class="values-head reveal">
-        <p class="label">Nossos valores</p>
-        <p class="values-intro">Eles não são só o que fazemos — são partes do nosso DNA.</p>
-      </div>
-      <div class="values-list">
-        <article class="value-row reveal"><span class="value-num">01</span><div><h3>Jesus é a nossa mensagem</h3><p>Jesus é o centro da nossa mensagem e da nossa cultura. Zelar pela sua presença é o nosso papel primordial.</p></div></article>
-        <article class="value-row reveal"><span class="value-num">02</span><div><h3>Contribuir é nosso privilégio</h3><p>Doar é uma forma de expressar gratidão a Deus. A comunidade cresce com um pedacinho do coração de cada um.</p></div></article>
-        <article class="value-row reveal"><span class="value-num">03</span><div><h3>Excelência é nosso espírito</h3><p>Damos o nosso melhor e cuidamos dos detalhes, glorificando a Deus com ordem, organização e beleza.</p></div></article>
-        <article class="value-row reveal"><span class="value-num">04</span><div><h3>Honra é nosso chamado</h3><p>Honramos a presença de Jesus e valorizamos as pessoas por quem elas são — não pelo que fazem.</p></div></article>
-        <article class="value-row reveal"><span class="value-num">05</span><div><h3>Liderança pelo serviço</h3><p>Como Jesus, vemos grandeza no ato de servir. Servir as pessoas é uma forma de adoração a Deus.</p></div></article>
-        <article class="value-row reveal"><span class="value-num">06</span><div><h3>Criatividade é fruto da espiritualidade</h3><p>Temos a mente de Cristo. Manifestamos criatividade em tudo, sempre apontando para Jesus como o autor do insight.</p></div></article>
       </div>
     </div>
   </section>
 
   <!-- ===== REUNIÕES ===== -->
-  <section class="section section-times" id="reunioes">
+  <section class="section section-reunioes" id="reunioes">
     <div class="container">
-      <div class="times-top reveal">
-        <p class="label">Reuniões &amp; Localização</p>
-        <p class="times-see">Nos vemos domingo na igreja.</p>
+      <div class="reunioes-top reveal">
+        <div>
+          <p class="eyebrow">Reuniões &amp; localização</p>
+          <h2 class="h2">nos vemos<br />neste domingo.</h2>
+        </div>
+        <p class="see">é só chegar. a gente te recebe.</p>
       </div>
       <div class="times-grid">
-        <div class="times-card reveal">
-          <p class="card-kicker">Domingo</p>
-          <ul class="times-list">
-            <li><span>Manhã</span><strong>09h</strong></li>
-            <li><span>Manhã</span><strong>11h</strong></li>
-            <li><span>Noite</span><strong>18h</strong></li>
-            <li><span>Noite</span><strong>20h</strong></li>
+        <div class="tcard reveal">
+          <p class="k">domingo</p>
+          <ul class="slots">
+            <li><span class="when">manhã</span><span class="hr">11h</span></li>
+            <li><span class="when">noite</span><span class="hr">18h</span></li>
+            <li><span class="when">noite</span><span class="hr">20h</span></li>
           </ul>
+          <p class="note">Três reuniões de celebração. Traga quem você ama.</p>
         </div>
-        <div class="times-card reveal">
-          <p class="card-kicker">Quinta-feira</p>
-          <ul class="times-list"><li><span>Reunião de Fé</span><strong>20h</strong></li></ul>
-          <p class="card-note">Uma noite para renovar a fé e honrar a presença de Deus.</p>
+        <div class="tcard mar reveal">
+          <p class="k">durante a semana</p>
+          <ul class="slots">
+            <li><span class="when">ter · qui</span><span class="hr">oração</span></li>
+            <li><span class="when">quarta</span><span class="hr">mulheres</span></li>
+            <li><span class="when">sábado</span><span class="hr">DNA</span></li>
+          </ul>
+          <p class="note">Escola de Oração, Sala de Oração e Discipulado de Mulheres e o DNA.</p>
         </div>
-        <div class="times-card times-card-place reveal">
-          <p class="card-kicker">Onde estamos</p>
-          <p class="place-addr">Av. Marginal Oeste, 2000<br />Balneário Camboriú · SC</p>
+        <div class="tcard ceu reveal">
+          <p class="k">onde estamos</p>
+          <p class="addr">Av. Marginal Oeste, 2000<br />Balneário Camboriú · SC</p>
           <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&query=Av.+Marginal+Oeste+2000+Balneario+Camboriu" target="_blank" rel="noopener">Traçar rota</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== COMUNIDADE ===== -->
-  <section class="section section-community" id="comunidade">
-    <div class="container">
-      <div class="wordband wordband-ink reveal" aria-hidden="true">
-        <span>we</span><span>are</span><span>reino</span>
-      </div>
-      <div class="community-grid">
-        <figure class="community-card card-tall reveal" aria-hidden="true">
-          <div class="community-photo photo-ceu"></div>
-          <figcaption>Adoração</figcaption>
-        </figure>
-        <figure class="community-card reveal" aria-hidden="true">
-          <div class="community-photo photo-areia"></div>
-          <figcaption>Comunhão</figcaption>
-        </figure>
-        <figure class="community-card card-arch reveal" aria-hidden="true">
-          <div class="community-photo photo-mar"></div>
-          <figcaption>Life Style</figcaption>
-        </figure>
-        <figure class="community-card reveal" aria-hidden="true">
-          <div class="community-photo photo-ceu-2"></div>
-          <figcaption>Ambientação</figcaption>
-        </figure>
-      </div>
-      <p class="community-text reveal">
-        A vida na Reino é vivida em comunidade e transcende o espaço do templo:
-        acontece na adoração, na comunhão entre as pessoas e no dia a dia — na
-        cidade, na natureza e na praia.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== CONECTE-SE / EQUIPES ===== -->
-  <section class="section section-connect" id="conecte">
-    <div class="container">
-      <p class="label reveal">Conecte-se</p>
-      <p class="connect-intro reveal">Servir é uma experiência de adoração. Encontre o seu lugar entre as equipes.</p>
-      <div class="connect-grid">
-        <article class="connect-card reveal"><span class="mark mark-sm" aria-hidden="true"><svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.6"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg></span><h3>Sou novo aqui</h3><p>Planeje sua visita e deixe que a gente te receba pessoalmente na sua primeira reunião.</p><a href="#visita" class="text-link">Planejar visita</a></article>
-        <article class="connect-card reveal"><span class="mark mark-sm" aria-hidden="true"><svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.6"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg></span><h3>Células &amp; Grupos</h3><p>A vida acontece juntos. Participe de um grupo perto de você durante a semana.</p><a href="#contato" class="text-link">Quero participar</a></article>
-        <article class="connect-card reveal"><span class="mark mark-sm" aria-hidden="true"><svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.6"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg></span><h3>Sirva nas equipes</h3><p>Use seus dons para servir ao redor de Cristo. Há uma equipe esperando por você.</p><a href="#contato" class="text-link">Quero servir</a></article>
-        <article class="connect-card reveal"><span class="mark mark-sm" aria-hidden="true"><svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.6"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg></span><h3>Reino Kids &amp; Mulheres</h3><p>Equipes e ministérios para cada estação da vida — Reino Kids, Mulheres Reino e mais.</p><a href="https://www.instagram.com/wearereino/" target="_blank" rel="noopener" class="text-link">Conhecer</a></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTRIBUA ===== -->
-  <section class="section section-give" id="contribua">
-    <div class="container give-inner">
-      <p class="label reveal">Contribuir é nosso privilégio</p>
-      <p class="give-text reveal">
-        Doar é uma maneira de expressar gratidão a Deus por tudo o que Ele nos deu.
-        Nossa credibilidade nas ofertas se apoia em quatro pilares.
-      </p>
-      <div class="pillars reveal">
-        <div class="pillar"><span>Gratidão</span></div>
-        <div class="pillar"><span>Generosidade</span></div>
-        <div class="pillar"><span>Voluntariedade</span></div>
-        <div class="pillar"><span>Amor</span></div>
-      </div>
-      <div class="give-actions reveal">
-        <a href="#contato" class="btn btn-solid">Quero contribuir</a>
-        <a href="#contato" class="btn btn-line">Falar com a tesouraria</a>
-      </div>
-      <p class="give-verse reveal">"Cada um contribua segundo propôs no seu coração." — 2 Coríntios 9:7</p>
-    </div>
-  </section>
-
-  <!-- ===== VISITA / CONTATO ===== -->
-  <section class="section section-visit" id="visita">
-    <div class="container visit-grid">
-      <div class="visit-copy reveal">
-        <p class="label">Planeje sua visita</p>
-        <h2 class="visit-title">Nos vemos domingo<br />na igreja · 10am</h2>
-        <p class="visit-text">
-          Preencha o formulário e nossa equipe entrará em contato para te receber.
-          Sua primeira vez na Reino vai ser especial.
-        </p>
-        <ul class="visit-info" id="contato">
-          <li><span>Endereço</span> Av. Marginal Oeste, 2000 — Balneário Camboriú, SC</li>
-          <li><span>E-mail</span> <a href="mailto:contato@reinochurch.com">contato@reinochurch.com</a></li>
-          <li><span>Redes</span> <a href="https://www.instagram.com/wearereino/" target="_blank" rel="noopener">@wearereino</a></li>
+  <!-- ===== VISITA ===== -->
+  <section class="section section-visita" id="visita">
+    <div class="container visita-grid">
+      <div class="visita-copy reveal">
+        <p class="eyebrow">Planeje sua visita</p>
+        <h2 class="h2">sua primeira vez<br />vai ser diferente.</h2>
+        <p class="lead">Papo reto: aqui ninguém vai te encurralar. Você chega, senta, respira e vive uma reunião do jeito Reino. Se quiser, a gente te recebe pessoalmente.</p>
+        <ul class="expect">
+          <li><span class="num">01</span><p><strong>Quando chegar</strong>O hall abre 15 minutos antes de cada reunião. Chegue com calma — tem café e gente pra te receber.</p></li>
+          <li><span class="num">02</span><p><strong>O que esperar</strong>Louvor de verdade, uma palavra que faz sentido pra vida real e zero clima de igrejão.</p></li>
+          <li><span class="num">03</span><p><strong>Suas crianças</strong>Temos equipe pra receber crianças e adolescentes por faixa etária, com segurança e cuidado.</p></li>
         </ul>
       </div>
-
-      <form class="visit-form reveal" id="visitForm" novalidate>
-        <div class="field"><label for="nome">Nome completo</label><input type="text" id="nome" name="nome" autocomplete="name" required /></div>
+      <form class="form-card reveal" id="visitForm" novalidate>
+        <h3>vou visitar</h3>
+        <p class="sub">Preenche aqui que a nossa equipe te recebe.</p>
+        <div class="field"><label for="nome">Nome</label><input type="text" id="nome" name="nome" autocomplete="name" required /></div>
         <div class="field"><label for="email">E-mail</label><input type="email" id="email" name="email" autocomplete="email" required /></div>
         <div class="field"><label for="telefone">WhatsApp</label><input type="tel" id="telefone" name="telefone" autocomplete="tel" /></div>
         <div class="field">
-          <label for="culto">Qual reunião pretende visitar?</label>
-          <select id="culto" name="culto">
-            <option value="dom-9">Domingo · 09h</option>
+          <label for="reuniao">Qual reunião você vem?</label>
+          <select id="reuniao" name="reuniao">
             <option value="dom-11">Domingo · 11h</option>
             <option value="dom-18">Domingo · 18h</option>
             <option value="dom-20">Domingo · 20h</option>
-            <option value="qui-20">Quinta · 20h</option>
+            <option value="semana">Durante a semana</option>
           </select>
         </div>
-        <div class="field"><label for="mensagem">Mensagem (opcional)</label><textarea id="mensagem" name="mensagem" rows="3"></textarea></div>
-        <button type="submit" class="btn btn-solid btn-block">Enviar</button>
+        <button type="submit" class="btn btn-solid" style="width:100%">Quero visitar</button>
         <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
       </form>
+    </div>
+  </section>
+
+  <!-- ===== COMUNIDADE ===== -->
+  <section class="section section-comunidade comunidade" id="comunidade">
+    <div class="container">
+      <div class="wordband reveal" aria-hidden="true"><span>we</span><span>are</span><span>reino</span></div>
+      <div class="gallery">
+        <figure class="gcard tall reveal" aria-hidden="true"><div class="gphoto p-ceu"></div><figcaption>adoração</figcaption></figure>
+        <figure class="gcard reveal" aria-hidden="true"><div class="gphoto p-areia"></div><figcaption>comunhão</figcaption></figure>
+        <figure class="gcard arch reveal" aria-hidden="true"><div class="gphoto p-mar"></div><figcaption>life style</figcaption></figure>
+        <figure class="gcard reveal" aria-hidden="true"><div class="gphoto p-ceu2"></div><figcaption>ambientação</figcaption></figure>
+      </div>
+      <p class="comunidade-note reveal">A vida na Reino acontece junto — e vai além do prédio. É na adoração, na comunhão entre as pessoas e no dia a dia: na cidade, na natureza e na praia.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONECTE-SE ===== -->
+  <section class="section section-conecte on-ink" id="conecte">
+    <div class="container">
+      <div class="conecte-head reveal">
+        <p class="eyebrow" style="color:rgba(238,234,224,0.6)">Conecte-se</p>
+        <h2 class="h2">dê o próximo passo.</h2>
+        <p class="lead">Servir é uma experiência de adoração. Encontre o seu lugar — a gente caminha com você.</p>
+      </div>
+      <div class="conecte-grid">
+        <article class="cn reveal"><span class="num">01</span><h3>grupos &amp; discipulado</h3><p>A vida acontece em comunidade. Entre num grupo perto de você e cresça junto com outras pessoas.</p><a href="#visita" class="textlink">Quero entrar →</a></article>
+        <article class="cn reveal"><span class="num">02</span><h3>voluntários &amp; equipes</h3><p>Use seus dons pra servir ao redor de Cristo. Tem uma equipe esperando por você.</p><a href="#visita" class="textlink">Quero servir →</a></article>
+        <article class="cn reveal"><span class="num">03</span><h3>recap</h3><p>O movimento dos adolescentes da Reino. Energia, cultura e Jesus no centro.</p><a href="#eventos" class="textlink">Conhecer →</a></article>
+        <article class="cn reveal"><span class="num">04</span><h3>movimento epiphany</h3><p>Nossa frente evangelística — conhecida pelo <strong>Amanhecer</strong> na Praia Central de Balneário Camboriú.</p><a href="#eventos" class="textlink">Conhecer →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENSAGENS ===== -->
+  <section class="section section-mensagens" id="mensagens">
+    <div class="container">
+      <div class="mensagens-top reveal">
+        <div>
+          <p class="eyebrow">Mensagens</p>
+          <h2 class="h2">ouça como<br />a gente soa num domingo.</h2>
+        </div>
+        <a href="https://www.youtube.com/@wearereino" target="_blank" rel="noopener" class="btn btn-line">Ver tudo no YouTube</a>
+      </div>
+      <div class="msg-grid">
+        <article class="msg reveal"><div class="msg-thumb" aria-hidden="true"><span class="play">▶</span></div><span class="series">Série · Reino x religião</span><h3>pertencer antes de crer</h3><p>Por que a gente não é uma religião — e o que isso muda na sua vida.</p></article>
+        <article class="msg reveal"><div class="msg-thumb" aria-hidden="true"><span class="play">▶</span></div><span class="series">Série · Identidade</span><h3>filho, não escravo</h3><p>Você é amado antes de fazer qualquer coisa. Entenda quem você é.</p></article>
+        <article class="msg reveal"><div class="msg-thumb" aria-hidden="true"><span class="play">▶</span></div><span class="series">Série · Cultura</span><h3>o ordinário extraordinário</h3><p>Como viver o comum de um jeito que transborda a presença de Deus.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTOS ===== -->
+  <section class="section section-eventos" id="eventos">
+    <div class="container">
+      <p class="eyebrow reveal">Agenda</p>
+      <h2 class="h2 reveal" style="margin-bottom:44px">o que tá rolando.</h2>
+      <div class="ev-list">
+        <article class="ev reveal">
+          <div><span class="tag">movimento epiphany</span><div class="big">amanhecer</div></div>
+          <p class="info">Um encontro com Deus ao nascer do sol na <strong>Praia Central</strong> de Balneário Camboriú. Adoração, palavra e comunidade na virada da noite pro dia.</p>
+          <a href="#contato" class="textlink">Saber mais →</a>
+        </article>
+        <article class="ev reveal">
+          <div><span class="tag">toda semana</span><div class="big">reuniões</div></div>
+          <p class="info">Domingo <strong>11h · 18h · 20h</strong>. Durante a semana: Escola de Oração, Mulheres e DNA.</p>
+          <a href="#reunioes" class="textlink">Ver horários →</a>
+        </article>
+        <article class="ev reveal">
+          <div><span class="tag">adolescentes</span><div class="big">recap</div></div>
+          <p class="info">O movimento dos adolescentes da Reino. Fique por dentro das próximas datas pelas nossas redes.</p>
+          <a href="https://www.instagram.com/wearereino/" target="_blank" rel="noopener" class="textlink">Instagram →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NO QUE CREMOS ===== -->
+  <section class="section section-cremos" id="cremos">
+    <div class="container cremos-inner">
+      <div class="reveal">
+        <p class="eyebrow">No que cremos</p>
+        <h2 class="h2">nossa fé,<br />sem enrolação.</h2>
+        <p class="lead">A Reino confessa publicamente aquilo que crê. Nossa Declaração Pública de Fé reúne 32 artigos, dos fundamentos da Trindade à bendita esperança da nova criação.</p>
+        <p style="margin:26px 0 0"><a href="fe.html" class="btn btn-solid">Ler a Declaração de Fé</a></p>
+      </div>
+      <div class="cremos-side reveal">
+        <ol>
+          <li><b>I.</b> Deus e a Trindade</li>
+          <li><b>II.</b> A Pessoa e a Obra de Cristo</li>
+          <li><b>III.</b> O Espírito Santo</li>
+          <li><b>IV.</b> A Revelação de Deus</li>
+          <li><b>V.</b> Anjos e Demônios</li>
+          <li><b>VI.</b> Antropologia e Pecado</li>
+          <li><b>VII.</b> A Obra Salvífica</li>
+          <li><b>VIII.</b> Evangelho e Discipulado</li>
+          <li><b>IX.</b> A Igreja e seus Ministérios</li>
+          <li><b>X.</b> Vida Cristã e Sociedade</li>
+          <li><b>XI.</b> As Últimas Coisas</li>
+          <li><b>—</b> 32 artigos · base bíblica</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTRIBUIR ===== -->
+  <section class="section section-contribuir" id="contribuir">
+    <div class="container contribuir-inner reveal">
+      <p class="eyebrow">Contribuir</p>
+      <h2 class="h2">contribuir é um privilégio.</h2>
+      <p class="lead" style="margin-inline:auto">Sem peso e sem cobrança. Doar é um jeito de expressar gratidão a Deus e de fazer a Reino alcançar mais gente. Cada oferta se apoia em quatro pilares.</p>
+      <div class="pillars">
+        <div class="pillar"><span>gratidão</span></div>
+        <div class="pillar"><span>generosidade</span></div>
+        <div class="pillar"><span>voluntariedade</span></div>
+        <div class="pillar"><span>amor</span></div>
+      </div>
+      <div class="give-actions">
+        <a href="#contato" class="btn btn-solid">Quero contribuir</a>
+        <a href="#contato" class="btn btn-line">Falar com a secretaria</a>
+      </div>
+      <p class="give-verse">"Cada um contribua segundo propôs no seu coração." — 2 Coríntios 9:7</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="section section-contato" id="contato">
+    <div class="container contato-grid">
+      <div class="reveal">
+        <p class="eyebrow">Contato</p>
+        <h2 class="h2">fala com a gente.</h2>
+        <ul class="contato-info">
+          <li><span class="l">Endereço</span><span class="v">Av. Marginal Oeste, 2000 — Balneário Camboriú, SC</span></li>
+          <li><span class="l">E-mail</span><span class="v"><a href="mailto:contato@reinochurch.com">contato@reinochurch.com</a></span></li>
+          <li><span class="l">Secretaria &amp; Ouvidoria</span><span class="v">Estamos aqui pra te ouvir e te acolher.</span></li>
+          <li><span class="l">Redes</span><span class="v"><a href="https://www.instagram.com/wearereino/" target="_blank" rel="noopener">@wearereino</a></span></li>
+        </ul>
+      </div>
+      <a class="map-card reveal" href="https://www.google.com/maps/search/?api=1&query=Av.+Marginal+Oeste+2000+Balneario+Camboriu" target="_blank" rel="noopener">
+        <span class="textlink">Abrir no mapa →</span>
+      </a>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container">
-      <div class="wordband wordband-foot" aria-hidden="true">
-        <span>we</span><span>are</span><span>reino</span>
-      </div>
+      <div class="wordband footer-word" aria-hidden="true"><span>vivendo</span><span>o</span><span>extraordinário</span></div>
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="mark" aria-hidden="true"><svg viewBox="0 0 80 52" fill="none"><ellipse cx="40" cy="26" rx="38" ry="24" stroke="currentColor" stroke-width="2.4"/><text x="40" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="26" fill="currentColor">R</text></svg></span>
-          <p>Vivendo o ordinário de forma extraordinária.<br />Balneário Camboriú · SC</p>
+          <p>Não somos uma religião, somos um estilo de vida. Balneário Camboriú · SC.</p>
         </div>
-        <nav class="footer-nav" aria-label="Rodapé">
-          <h4>Navegue</h4>
-          <a href="#sobre">Sobre</a>
-          <a href="#jornada">Jornada</a>
-          <a href="#valores">Valores</a>
+        <div class="footcol">
+          <h4>Acessos rápidos</h4>
+          <a href="#visita">Planeje sua visita</a>
           <a href="#reunioes">Reuniões</a>
-          <a href="#contribua">Contribua</a>
-        </nav>
-        <div class="footer-contact">
-          <h4>Contato</h4>
-          <p>Av. Marginal Oeste, 2000<br />Balneário Camboriú · SC</p>
-          <p><a href="mailto:contato@reinochurch.com">contato@reinochurch.com</a></p>
-          <div class="footer-social">
-            <a href="https://www.instagram.com/wearereino/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.youtube.com/@wearereino" target="_blank" rel="noopener">YouTube</a>
-            <a href="https://www.tiktok.com/@wearereino" target="_blank" rel="noopener">TikTok</a>
-            <a href="https://www.facebook.com/wearereino/" target="_blank" rel="noopener">Facebook</a>
-          </div>
+          <a href="#mensagens">Mensagens</a>
+          <a href="fe.html">No que cremos</a>
+        </div>
+        <div class="footcol">
+          <h4>Conecte-se</h4>
+          <a href="#conecte">Grupos &amp; equipes</a>
+          <a href="#eventos">Eventos</a>
+          <a href="#contribuir">Contribuir</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footcol">
+          <h4>Redes</h4>
+          <a href="https://www.instagram.com/wearereino/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@wearereino" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.tiktok.com/@wearereino" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/wearereino/" target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Reino Church · Balneário Camboriú.</p>
+        <p>&copy; <span id="year"></span> a Reino · Balneário Camboriú.</p>
+        <p>vivendo o ordinário de forma extraordinária</p>
       </div>
     </div>
   </footer>
