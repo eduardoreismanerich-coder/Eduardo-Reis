@@ -197,6 +197,12 @@ em { font-style: normal; }
 .hero-times .sep { color: var(--accent); }
 
 /* ============================================================
+   FACHADA (full-bleed)
+   ============================================================ */
+.fachada-band { position: relative; width: 100%; overflow: hidden; background: var(--areia-2); }
+.fachada-band img { width: 100%; height: clamp(320px, 62vh, 660px); object-fit: cover; display: block; }
+
+/* ============================================================
    MANIFESTO (Reino x religião)
    ============================================================ */
 .section-manifesto { background: var(--areia); }
@@ -266,7 +272,9 @@ em { font-style: normal; }
 .comunidade .wordband { color: var(--ink); margin-bottom: 44px; }
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: end; }
 .gcard { margin: 0; }
-.gphoto { border-radius: 20px; aspect-ratio: 3 / 4; }
+.gphoto { border-radius: 20px; aspect-ratio: 3 / 4; overflow: hidden; background: var(--areia-2); }
+.gphoto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.gcard:hover .gphoto img { transform: scale(1.04); }
 .gcard.tall .gphoto { aspect-ratio: 3 / 4.7; }
 .gcard.arch .gphoto { border-top-left-radius: 140px; border-top-right-radius: 140px; }
 .p-ceu { background: linear-gradient(155deg, var(--ceu), var(--ceu-3)); }
@@ -310,12 +318,15 @@ em { font-style: normal; }
 .mensagens-top { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 46px; }
 .msg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .msg { }
+.msg { display: block; }
 .msg-thumb {
-  position: relative; aspect-ratio: 16/10; border-radius: 18px; overflow: hidden;
-  background: linear-gradient(150deg, var(--ceu-2), var(--mar-2)); display: grid; place-items: center; margin-bottom: 18px;
+  position: relative; aspect-ratio: 16/9; border-radius: 18px; overflow: hidden;
+  background: var(--areia-2); display: grid; place-items: center; margin-bottom: 18px;
 }
-.msg-thumb .play { width: 56px; height: 56px; border: 1px solid var(--ink); border-radius: 50%; display: grid; place-items: center; padding-left: 3px; background: rgba(255,255,255,0.5); transition: background 0.3s var(--ease); }
-.msg:hover .play { background: var(--white); }
+.msg-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.msg:hover .msg-thumb img { transform: scale(1.04); }
+.msg-thumb .play { position: relative; z-index: 2; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; padding-left: 3px; background: rgba(255,255,255,0.85); color: var(--ink); font-size: 0.9rem; opacity: 0; transition: opacity 0.3s var(--ease); }
+.msg:hover .play { opacity: 1; }
 .msg .series { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.68rem; color: var(--muted); }
 .msg h3 { font-weight: 400; font-size: 1.35rem; text-transform: lowercase; letter-spacing: -0.02em; margin: 8px 0 6px; }
 .msg p { color: var(--ink-soft); font-size: 0.92rem; margin: 0; }
