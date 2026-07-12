@@ -34,6 +34,7 @@
 
   --maxw: 1280px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --e-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --sans: "Helvetica Neue", "Inter", Helvetica, Arial, sans-serif;
 }
 
@@ -144,8 +145,9 @@ em { font-style: normal; }
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
   border-bottom: 1px solid transparent;
-  transition: background 0.35s var(--ease), border-color 0.35s var(--ease), color 0.35s var(--ease);
+  transition: transform 0.6s var(--e-expo), background 0.35s var(--ease), border-color 0.35s var(--ease), color 0.35s var(--ease);
 }
+.site-header.hidden { transform: translateY(-100%); }
 .site-header.scrolled {
   background: rgba(238, 234, 224, 0.86);
   backdrop-filter: blur(14px);
@@ -446,8 +448,50 @@ em { font-style: normal; }
 /* ============================================================
    REVEAL
    ============================================================ */
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 1.05s var(--e-expo), transform 1.05s var(--e-expo); }
 .reveal.visible { opacity: 1; transform: none; }
+
+/* ============================================================
+   MOTION — reveals mascarados, clip, marquee, hero, botões
+   ============================================================ */
+
+/* palavras mascaradas (split) */
+.split .w { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.split .wi { display: inline-block; transform: translateY(118%); transition: transform 1.15s var(--e-expo); will-change: transform; }
+.split.in .wi { transform: none; }
+
+/* clip reveal para mídia (fachada, liderança) */
+.clip-reveal { clip-path: inset(12% 7% 12% 7%); transition: clip-path 1.35s var(--e-expo); }
+.clip-reveal.in { clip-path: inset(0 0 0 0); }
+.lid-photo.clip-reveal { clip-path: inset(12% 7% 12% 7% round 24px); }
+.lid-photo.clip-reveal.in { clip-path: inset(0 0 0 0 round 24px); }
+
+/* sequência de entrada do hero */
+.h-pre { opacity: 0; transform: translateY(28px); transition: opacity 1.05s var(--e-expo), transform 1.05s var(--e-expo); }
+body.loaded .h-pre { opacity: 1; transform: none; }
+.js .hero-arcs path {
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  transition: stroke-dashoffset 2s var(--e-expo) 0.35s;
+}
+.js body.loaded .hero-arcs path,
+body.loaded .hero-arcs path { stroke-dashoffset: 0; }
+
+/* marquee (ticker) */
+.marquee { overflow: hidden; }
+.marquee .marquee-track { display: flex; width: max-content; animation: marquee 30s linear infinite; will-change: transform; }
+.marquee .marquee-half { display: flex; align-items: center; gap: 0.6em; padding-right: 0.6em; white-space: nowrap; }
+.marquee .marquee-half i { font-style: normal; color: var(--accent); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* botões: label desliza no hover */
+.btn .bl { position: relative; display: block; overflow: hidden; }
+.btn .bl span { display: block; transition: transform 0.55s var(--e-expo); }
+.btn .bl span:last-child { position: absolute; inset: 0; transform: translateY(112%); }
+.btn:hover .bl span:first-child { transform: translateY(-112%); }
+.btn:hover .bl span:last-child { transform: translateY(0); }
+
+/* parallax */
+.gphoto img, .lid-photo img, .fachada-band img { will-change: transform; }
 
 /* ============================================================
    DECLARAÇÃO DE FÉ (fe.html)
@@ -540,4 +584,8 @@ em { font-style: normal; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  .clip-reveal { clip-path: none; transition: none; }
+  .h-pre { opacity: 1; transform: none; transition: none; }
+  .split .wi { transform: none; transition: none; }
+  .site-header.hidden { transform: none; }
 }
