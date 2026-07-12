@@ -26,9 +26,11 @@
   --mar-3: #A7C4C3;
 
   --white: #ffffff;
+  --accent: #6f9b9a;      /* sage — acentos gráficos com contraste, ainda suave */
+  --foot: #DFE3DC;        /* rodapé pastel */
   --line: rgba(20, 20, 20, 0.14);
   --line-soft: rgba(20, 20, 20, 0.08);
-  --line-on-ink: rgba(238, 234, 224, 0.16);
+  --line-on-ink: rgba(20, 20, 20, 0.12);
 
   --maxw: 1280px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -170,28 +172,29 @@ em { font-style: normal; }
    ============================================================ */
 .hero {
   position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end;
-  background: var(--ink); color: var(--areia); padding: 120px 0 40px; overflow: hidden;
+  background: linear-gradient(165deg, var(--ceu) 0%, var(--areia) 58%, var(--areia) 100%);
+  color: var(--ink); padding: 120px 0 40px; overflow: hidden;
 }
 .hero-ring {
-  position: absolute; top: -12%; right: -8%; width: min(60vw, 640px); color: var(--line-on-ink);
-  pointer-events: none;
+  position: absolute; top: -14%; right: -8%; width: min(62vw, 680px); color: var(--mar-2);
+  opacity: 0.65; pointer-events: none;
 }
 .hero-ring svg { width: 100%; height: auto; }
 .hero-top { position: absolute; top: 120px; left: 0; right: 0; }
-.hero-eyebrow { color: rgba(238,234,224,0.6); }
-.hero-eyebrow .paren { color: var(--areia); }
+.hero-eyebrow { color: var(--muted); }
+.hero-eyebrow .paren { color: var(--accent); }
 .hero-main { position: relative; z-index: 2; }
-.hero-title { font-size: clamp(3.2rem, 13vw, 12rem); font-weight: 300; letter-spacing: -0.04em; line-height: 0.86; text-transform: lowercase; margin: 0; }
-.hero-title .x { font-weight: 200; color: var(--ceu-2); padding: 0 0.12em; }
-.hero-sub { margin: 30px 0 40px; font-size: clamp(1.05rem, 1.8vw, 1.35rem); color: rgba(238,234,224,0.78); max-width: 40ch; }
+.hero-title { font-size: clamp(3.2rem, 13vw, 12rem); font-weight: 300; letter-spacing: -0.04em; line-height: 0.86; text-transform: lowercase; margin: 0; text-wrap: balance; }
+.hero-title .x { font-weight: 200; color: var(--accent); padding: 0 0.12em; }
+.hero-sub { margin: 30px 0 40px; font-size: clamp(1.05rem, 1.8vw, 1.35rem); color: var(--ink-soft); max-width: 42ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .hero-times {
   display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: baseline; margin-top: 48px;
-  padding-top: 26px; border-top: 1px solid var(--line-on-ink);
+  padding-top: 26px; border-top: 1px solid var(--line);
 }
-.hero-times .lbl { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.68rem; color: rgba(238,234,224,0.55); margin-right: 8px; }
+.hero-times .lbl { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.68rem; color: var(--muted); margin-right: 8px; }
 .hero-times .slot { font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 300; font-variant-numeric: tabular-nums; }
-.hero-times .sep { color: var(--ceu-2); }
+.hero-times .sep { color: var(--accent); }
 
 /* ============================================================
    MANIFESTO (Reino x religião)
@@ -276,16 +279,16 @@ em { font-style: normal; }
 /* ============================================================
    CONECTE-SE (ink)
    ============================================================ */
-.section-conecte { background: var(--ink); color: var(--areia); }
+.section-conecte { background: var(--mar); color: var(--ink); }
 .conecte-head { max-width: 24ch; margin-bottom: clamp(44px, 6vw, 80px); }
-.conecte-head .lead { color: rgba(238,234,224,0.72); }
+.conecte-head .lead { color: var(--ink-soft); }
 .conecte-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-top: 1px solid var(--line-on-ink); }
 .cn { padding: 40px 40px 40px 0; border-bottom: 1px solid var(--line-on-ink); border-right: 1px solid var(--line-on-ink); }
 .cn:nth-child(2n) { padding-right: 0; border-right: none; padding-left: 40px; }
-.cn .num { font-size: 0.8rem; letter-spacing: 0.2em; color: var(--ceu-2); }
+.cn .num { font-size: 0.8rem; letter-spacing: 0.2em; color: var(--accent); }
 .cn h3 { font-weight: 400; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: lowercase; letter-spacing: -0.02em; margin: 14px 0 12px; }
-.cn p { color: rgba(238,234,224,0.72); font-size: 0.98rem; margin: 0 0 22px; max-width: 42ch; }
-.cn .textlink { color: var(--areia); }
+.cn p { color: var(--ink-soft); font-size: 0.98rem; margin: 0 0 22px; max-width: 42ch; }
+.cn .textlink { color: var(--ink); }
 
 /* ============================================================
    MENSAGENS
@@ -307,7 +310,7 @@ em { font-style: normal; }
 /* ============================================================
    EVENTOS
    ============================================================ */
-.section-eventos { background: var(--mar); }
+.section-eventos { background: var(--ceu); }
 .ev-list { display: flex; flex-direction: column; }
 .ev {
   display: grid; grid-template-columns: 200px 1fr auto; gap: 30px; align-items: center;
@@ -357,16 +360,16 @@ em { font-style: normal; }
 /* ============================================================
    FOOTER
    ============================================================ */
-.site-footer { background: var(--ink); color: var(--areia); padding: 70px 0 34px; }
-.footer-word { color: rgba(238,234,224,0.9); padding-bottom: 50px; border-bottom: 1px solid var(--line-on-ink); }
+.site-footer { background: var(--foot); color: var(--ink); padding: 70px 0 34px; }
+.footer-word { color: var(--ink); padding-bottom: 50px; border-bottom: 1px solid var(--line); }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding: 50px 0; }
-.footer-brand .mark { color: var(--areia); }
-.footer-brand p { color: rgba(238,234,224,0.6); margin: 18px 0 0; font-size: 0.94rem; max-width: 30ch; }
-.footcol h4 { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.68rem; color: rgba(238,234,224,0.5); margin: 0 0 18px; font-weight: 500; }
-.footcol a, .footcol p { display: block; color: rgba(238,234,224,0.78); padding: 6px 0; font-size: 0.92rem; margin: 0; transition: color 0.2s; }
-.footcol a:hover { color: var(--areia); }
-.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 26px; border-top: 1px solid var(--line-on-ink); }
-.footer-bottom p { margin: 0; color: rgba(238,234,224,0.5); font-size: 0.78rem; }
+.footer-brand .mark { color: var(--ink); }
+.footer-brand p { color: var(--ink-soft); margin: 18px 0 0; font-size: 0.94rem; max-width: 30ch; }
+.footcol h4 { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.68rem; color: var(--muted); margin: 0 0 18px; font-weight: 500; }
+.footcol a, .footcol p { display: block; color: var(--ink-soft); padding: 6px 0; font-size: 0.92rem; margin: 0; transition: color 0.2s; }
+.footcol a:hover { color: var(--ink); }
+.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 26px; border-top: 1px solid var(--line); }
+.footer-bottom p { margin: 0; color: var(--muted); font-size: 0.78rem; }
 
 /* ============================================================
    REVEAL
@@ -377,11 +380,11 @@ em { font-style: normal; }
 /* ============================================================
    DECLARAÇÃO DE FÉ (fe.html)
    ============================================================ */
-.fe-hero { background: var(--ink); color: var(--areia); padding: 160px 0 80px; }
-.fe-hero .eyebrow { color: rgba(238,234,224,0.6); }
+.fe-hero { background: linear-gradient(165deg, var(--ceu) 0%, var(--areia) 65%); color: var(--ink); padding: 160px 0 80px; }
+.fe-hero .eyebrow { color: var(--muted); }
 .fe-hero h1 { font-weight: 300; font-size: clamp(2.6rem, 8vw, 6rem); letter-spacing: -0.03em; line-height: 0.94; text-transform: lowercase; margin: 0 0 30px; }
-.fe-hero .epigraph { font-style: italic; color: rgba(238,234,224,0.75); max-width: 60ch; font-size: 1.05rem; border-left: 1px solid var(--ceu-2); padding-left: 22px; }
-.fe-hero .meta { margin-top: 30px; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem; color: rgba(238,234,224,0.5); }
+.fe-hero .epigraph { font-style: italic; color: var(--ink-soft); max-width: 60ch; font-size: 1.05rem; border-left: 2px solid var(--accent); padding-left: 22px; }
+.fe-hero .meta { margin-top: 30px; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem; color: var(--muted); }
 
 .fe-prologo { background: var(--paper); }
 .fe-prologo .h2 { margin-bottom: 30px; }
@@ -413,11 +416,11 @@ em { font-style: normal; }
   font-size: 0.82rem; color: var(--muted);
 }
 .artigo .ref .l { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.64rem; color: var(--ink); display: block; margin-bottom: 6px; }
-.fe-doxologia { background: var(--ink); color: var(--areia); text-align: center; }
-.fe-doxologia .k { text-transform: uppercase; letter-spacing: 0.24em; font-size: 0.72rem; color: var(--ceu-2); margin-bottom: 26px; }
+.fe-doxologia { background: var(--mar); color: var(--ink); text-align: center; }
+.fe-doxologia .k { text-transform: uppercase; letter-spacing: 0.24em; font-size: 0.72rem; color: var(--accent); margin-bottom: 26px; }
 .fe-doxologia p { font-weight: 300; font-size: clamp(1.3rem, 3vw, 2rem); line-height: 1.4; max-width: 26ch; margin: 0 auto; letter-spacing: -0.01em; }
 .fe-doxologia .amem { margin-top: 26px; font-size: 1.4rem; }
-.fe-doxologia .place { margin-top: 40px; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.68rem; color: rgba(238,234,224,0.5); }
+.fe-doxologia .place { margin-top: 40px; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.68rem; color: var(--ink-soft); }
 
 /* ============================================================
    RESPONSIVE
